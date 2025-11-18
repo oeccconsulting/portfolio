@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio – Felix Novoa Córdova</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1.5rem 1.5rem;
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      letter-spacing: 0.03em;
+    }
+
+    header p {
+      margin-top: 0.25rem;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    main {
+      flex: 1;
+      padding: 1.5rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .top-bar .info {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid #111;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: #111;
+      color: #fff;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #111;
+      transform: translateY(-1px);
+    }
+
+    .viewer-container {
+      background: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 0.75rem;
+      height: calc(100vh - 200px);
+      min-height: 400px;
+    }
+
+    .viewer-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .fallback {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      padding: 1rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1.2rem 1rem;
+      }
+      main {
+        padding: 1rem;
+      }
+      .viewer-container {
+        height: 70vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio – Felix Novoa Córdova</h1>
+    <p>Architecture & Resource-Efficient and Sustainable Building</p>
+  </header>
+
+  <main>
+    <div class="top-bar">
+      <div class="info">
+        <strong>PDF Portfolio</strong><br>
+        View directly in the browser or download as a file.
+      </div>
+      <a class="btn" href="Portfolio Architecture and Sustainability Projects.pdf" download>
+        Download Portfolio (PDF)
+      </a>
+    </div>
+
+    <div class="viewer-container">
+      <!-- Change the file name below to match your PDF -->
+      <iframe 
+        src="Portfolio Architecture and Sustainability Projects.pdf"
+        title="Portfolio – Felix Novoa Córdova">
+      </iframe>
+      <p class="fallback">
+        If the PDF viewer does not load, 
+        <a href="Portfolio Architecture and Sustainability Projects.pdf" download>click here to download the portfolio</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © Felix Novoa Córdova – Portfolio
+  </footer>
+</body>
+</html>
